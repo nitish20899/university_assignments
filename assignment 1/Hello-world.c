@@ -19,8 +19,8 @@ PROCESS_THREAD(hello_world_process, ev, data)
   int i;
   float sum = 0;
   for (i = 0; i < count; i++) { 
-       float sc = random_rand()/ (float) RAND_MAX;
-       float ans = sc * ( max_num - min_num );
+       double sc = (double)rand() / (double)RAND_MAX ;;
+       double ans = sc;
        printf("%.8f\n", ans);
        sum = ans+sum;
   }
