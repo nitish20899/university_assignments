@@ -16,9 +16,9 @@ PROCESS_THREAD(hello_world_process, ev, data)
   int i;
   float sum = 0;
   for (i = 0; i < count; i++) { 
-       double sc = (double)random_rand() / (double)RANDOM_RAND_MAX ;
-       printf("%.8f\n", sc);
-       sum = sc+sum;
+       double randomNumber = (double)random_rand() / (double)RANDOM_RAND_MAX ;
+       printf("%.8f\n", randomNumber);
+       sum = randomNumber+sum;
   }
   printf("The sum of all the generated random numbers is %.8f\n", sum);
   PROCESS_END();
